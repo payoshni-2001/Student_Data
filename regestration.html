@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regestration</title>
+    <link rel="stylesheet" href="regestration.css">
+</head>
+<body>
+    <div class="mdiv">
+
+        <div class="regi">
+
+            <h1 class="heading" align="center">Sign In</h1>
+
+            <form class="form" autocomplete="off">
+                <input type="text" name="username" required placeholder="Username" class="for" id="un"><br>
+                <input type="password" name="password" required placeholder="Password" class="for" id="pwd1"><br>
+                <input type="password" name="password" required placeholder="Confirom Password" class="for" id="pwd2"><br>
+                <input type="email" name="email" required placeholder="Email ID" class="for" id="eml"><br>
+                <input type="text" name="number" placeholder="Phone Number" required maxlength="10" pattern="[6-9]{1}[0-9]{9}" class="for" id="phone"><br>
+                <button type="button" class="btn" onclick="CreateAccount()">Sign In</button>
+                <button type="reset" class="btn">Cancle</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="regestration.js"></script>
+</body>
+</html>

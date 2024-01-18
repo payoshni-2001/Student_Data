@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataEntry</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="dataEntry.css">
+</head>
+<body>
+   <div class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand logo" href="#">A3</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html" style="font-family: Cooper Black;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="dataEntry.html" style="font-family: Cooper Black;">DataEntry </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="info.html" style="font-family: Cooper Black;">Info </a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+   </div>
+   <div class="data-main">
+    <div class="user-info">
+        <h1 class="heading2" align="center">STUDENT DATA ENTRY</h1>
+        <div>
+        <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="username">Name</label>
+                <input type="text" class="form-control" id="username">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="phone">Contact</label>
+                <input type="text" class="form-control" id="phone">
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="education">Education</label>
+                  <input type="text" class="form-control" id="education">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="branch">Branch</label>
+                  <input type="text" class="form-control" id="branch">
+                </div>
+              </div>
+            
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="college">College</label>
+                  <input type="text" class="form-control" id="college">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="yop">Year of Passout</label>
+                  <input type="text" class="form-control" id="passout-year">
+                </div>               
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+              </div>
+            <button type="button" class="btn btn-primary" onclick="fetchFormData()">Save</button>
+          </form>
+    </div>
+   </div>
+</div> 
+<div class="student-table">
+    <div class="information-table">
+        <h1 class="heading2" align="center">STUDENT DATA</h1>
+        <div>
+            <!-- table starts here -->
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">sr no</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Email ID</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Education</th>
+                    <th scope="col">Yop</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="student-dataBody" id="tablebody">
+                 
+                </tbody>
+              </table>
+              <!-- table ends here -->
+        </div>
+    </div>
+</div> 
+<script src="dataEntey.js"></script>
+</body>
+</html>
